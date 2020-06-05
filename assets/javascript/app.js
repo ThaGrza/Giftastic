@@ -1,31 +1,35 @@
-var topics = ['tigers', 'robots', 'space'];
-
-generateButtons();
-// Funtion for genrating buttons.
-function generateButtons() {
-    $("#buttons").empty();
-// Loops through array and generates buttons in "buttuns" div.
-    for (var i = 0; i < topics.length; i++) {
-      var a = $("<button class='btn-primary'>");
-      a.addClass("gif");
-      a.attr("gif-data", topics[i]);
-      a.text(topics[i]);
-      $("#buttons").append(a);
-    }
-};
-
 $(document).ready(function(){
-    $("#buttons").on("click", ".gif", function(){
-        var gifImage = $(this).attr("gif-data");
 
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gifImage + "api_key=yFYPFKROkSJmh6uPLhNDPJ3G4pbKnfMm";
+    var animals = [
+        "Naruto", "One Piece", "Cats", "Dogs", "Games", "Steins; Gate"
+    ];
 
-        // Ajax request to the giphy api
+    function populateButtons(arrayToUse, classToAdd, areaToAddTo) {
+        $(areaToAddTo).empty();
+
+        for(var i =0; i < arrayToUse.length; i++){
+            var a = $("<button>");
+            a.addClass(classToAdd);
+            a.attr("data-type", arrayToUse[i]);
+            a.text(arrayToUse[i]);
+            $(areaToAddTo).append(a);
+        }
+    }
+
+    $(document).on("click", ".animal-button", function() {
+        $("#animals").empty();
+        $(".animals-button").removeClass("active");
+        $(this).addClass("active");
+
+        var type = $(this).attr("data-type");
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+
         $.ajax({
             url: queryURL,
             method: "GET"
-        }).done(function(response))
-
-
+        })
+        .then(function(response) {
+            var results = response.data;
+        }
     }
 }
