@@ -1,0 +1,30 @@
+body{
+    font: 24px arial, sans-serif;
+    background: #eee;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+
+#header{
+    font-size: 76px;
+    margin-bottom: 40px;
+    margin-top: 70px;
+}
+
+button{
+    padding: 5px 20px;
+    margin: 0px 10px 10px 0;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    background: rgb(116, 170, 233);
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgb(141, 184, 235);
+}
+
+.animal-item {
+    float: left;
+    padding: 10px;
+  }
