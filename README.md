@@ -7,7 +7,7 @@
 Giftastic is a small exercise to practice ajax.
 
 ## How to
-To use Giftastic, simply visit https://agriswold7.github.io/Giftastic/ and click on a category button to display their gifs or search and create your own category!
+To use Giftastic, simply visit https://ThaGrza.github.io/Giftastic/ and click on a category button to display their gifs or search and create your own category!
 
 ## Build Status
 N/A
