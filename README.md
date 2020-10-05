@@ -4,26 +4,15 @@
 ![Screenshot](/assets/screenshot.png)
 
 ## Motivation
-Giftastic is a small exercise to practice ajax.
+Giftastic was a homework assignment to practice ajax.
 
 ## How to
 To use Giftastic, simply visit https://ThaGrza.github.io/Giftastic/ and click on a category button to display their gifs or search and create your own category!
-
-## Build Status
-N/A
-
-## Styling
-N/A
 
 ## Tech/framework used
 <b> Built with </b>
 - [Javascript](https://www.javascript.com/)
 - [Jquery](https://jquery.com/)
-## Features
-N/A
-
-## Installation
-N/A
 
 ## API Reference
 https://developers.giphy.com/docs/sdk
