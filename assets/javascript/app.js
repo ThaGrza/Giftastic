@@ -47,9 +47,8 @@ $(document).ready(function() {
             var still = results[i].images.fixed_height_still.url;
   
             var animalImage = $("<img>");
-            animalImage.attr("src", still);
+            animalImage.attr("src", animated);
             animalImage.attr("data-still", still);
-            animalImage.attr("data-animate", animated);
             animalImage.attr("data-state", "still");
             animalImage.addClass("animal-image");
   
@@ -60,21 +59,7 @@ $(document).ready(function() {
           }
         });
     });
-  
-    $(document).on("click", ".animal-image", function() {
-  
-      var state = $(this).attr("data-state");
-  
-      if (state === "still") {
-        $(this).attr("src", $(this).attr("data-animate"));
-        $(this).attr("data-state", "animate");
-      }
-      else {
-        $(this).attr("src", $(this).attr("data-still"));
-        $(this).attr("data-state", "still");
-      }
-    });
-  
+    
     $("#add-animal").on("click", function(event) {
       event.preventDefault();
       var newAnimal = $("input").eq(0).val();
